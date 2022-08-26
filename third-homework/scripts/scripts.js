@@ -127,7 +127,7 @@ document.write("<b>Function #10 </b>" + "= " + deleteLetter ("a", "abracadabra")
 // Function #11
 
 function checkPalindromes (word) {
-    return word === word.split('').reverse('').join(''); //ok word is splitted, reversedm reunited and controlled if word=reverseword
+    return word.toLowerCase() === word.split('').reverse('').join('').toLowerCase(); //ok word is splitted, reversed, reunited and controlled if word=reverseword
   }
 
   document.write("<b>Function #11-a </b>" + "= " + checkPalindromes("янесугусеня") + " --- Створіть функцію, яка перевіряє, чи є слово паліндромом. </p>");

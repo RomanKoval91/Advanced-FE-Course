@@ -148,25 +148,25 @@ console.log(wordDividedByThree);
 
 // 10° Function: Letters combination
 
-function generateCombinations (word) {
-    var combinations = [];
+function generateCombinations(word){
+  const resultComb = [];
+  if (word.length <= 1) {
+    return word.length == 0 ? [] : [word];
+  }
+  for (let i = 0; i < word.length; i++) {
+   const newArr = word.slice(0, i) + word.slice(i + 1); 
+   const others = generateCombinations(newArr);
+   others && others.forEach((item) => {
+    resultComb.push(word[i] + item);
+    });
+  }
 
-    for (var i in word) {
-      var letter = word[i];
+  return [...new Set(resultComb)];
+ };
 
-      generateCombinations (word.join('').replace(letter, '').split('')).concat("").map(function(wordOption) {
-        combinations.push([letter].concat(wordOption));
-      });
-    }
-    return combinations;
-  };
-
-  console.log(generateCombinations("sun".split('')).map(function(str) {
-    return str.join('')
-  }))
-
-  document.writeln("Function #10 - Combined Letters of a Word: " + generateCombinations("sun".split('')).map(function(str) {
-    return str.join('')
-  }))
+ const wordCombinated = generateCombinations('dog');
+ console.log(wordCombinated);
+ document.writeln("Function #10 - Combined Letters of a Word: " + generateCombinations("dog"));
+ 
 
 

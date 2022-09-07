@@ -98,9 +98,20 @@ console.log(studentsNames);
 //5° Function
 
 function getBestStudent (students) {
-  const bestAverageMark = students.reduce((a, b) => getAverageMark(a) > getAverageMark(b) ? a : b)
- return [bestAverageMark.name]
+  const bestAverageMark = students.reduce((a, b) => {
+     if (getAverageMark(a) > getAverageMark(b)) {
+       return a;
+     } else {
+       return b;
+    }
+  });
+
+  return [bestAverageMark.name];
 }
+
+const bestStudent = getBestStudent (students);
+document.writeln('<b>Function #5 - Get the Best Student:</b> ' + bestStudent + "</p>")
+console.log(bestStudent);
 
 const bestStudent = getBestStudent (students);
 document.writeln('<b>Function #5 - Get the Best Student:</b> ' + bestStudent + "</p>")

@@ -1,7 +1,5 @@
 let newMark = parseInt(prompt (("Введіть оцінку")))
-while (!newMark) {
-  newMark = +prompt("Введені дані не є оцінкою! Введіть оцінку:");
-}
+
 while (!Number.isInteger(newMark)) {
   newMark = +prompt("Ви ввели не ціле число. Введіть ціле число:");
 }

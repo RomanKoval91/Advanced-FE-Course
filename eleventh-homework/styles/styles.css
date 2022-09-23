@@ -1,0 +1,130 @@
+body {
+    background-color: limegreen;
+   background-image: url(../images/wp2327029.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.title {display: table;
+    margin: auto;
+color: white;}
+
+.piano_keys {
+    margin: 0 auto;
+    margin-top: 12%;
+    width: 400px;
+    transform: translateX(+100%);
+}
+
+
+.Do_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/Do.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.active {
+    border-style: solid;
+   border-width: 5px;
+   border-color: black;
+}
+
+
+.Do_note_button:hover {
+    box-shadow: -5px 5px 5px 5px;
+    color: red;
+}
+
+.Re_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/Re.png);
+    cursor: pointer;
+    margin-right: -8px;
+} 
+
+.Re_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: green;
+}
+
+.Mi_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/Mi.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.Mi_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: yellow;
+}
+
+.Fa_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/Fa.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.Fa_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: violet;
+}
+
+.Sol_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/Sol.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.Sol_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: orange;
+}
+
+.La_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/La.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.La_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: white;
+}
+
+.Si_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/La.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.Si_note_button:hover {
+    box-shadow: 0px 8px 5px 0px;
+    color: goldenrod;
+}
+
+.Do5_note_button {
+    height: 270px;
+    width: 50px;
+    background: url(../images/La.png);
+    cursor: pointer;
+    margin-right: -5px;
+} 
+
+.Do5_note_button:hover {
+    box-shadow: 5px 5px 5px 5px;
+    color: blue;
+}
+

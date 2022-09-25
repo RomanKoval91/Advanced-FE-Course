@@ -1,0 +1,8 @@
+.title {display: table;
+    margin: auto;
+color: black;}
+
+
+/* chineseLetters 
+
+[sign.length - 5] + sign[sign.length - 4] + sign[sign.length - 3] + sign[sign.length - 2] + sign[sign.length - 1]; 

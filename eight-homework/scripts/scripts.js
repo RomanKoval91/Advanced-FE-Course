@@ -9,21 +9,16 @@ class Student {
   } 
 
   getInfo() {
-
-    return [this.dismiss ? "Студент " + this.course + "го курсу " + this.university + ", " + this.fullName : null] 
+    return this.dismiss ? "Студент " + this.course + "го курсу " + this.university + ", " + this.fullName : null
   }
 
   studentMarks()  {
-
-    if (this.dismiss) {return this.marks}
-    return null;
+return this.dismiss ? this.marks : null
   }
 
   setMark () {
-    if (this.dismiss) {return this.newMarks}
-    return null;
+return this.dismiss ? this.newMarks : null
   }
-
 
   getAverageMark () {
 
@@ -31,20 +26,19 @@ let sumMarks = 0;
 for (let el = 0; el < this.newMarks.length; el++) {
   sumMarks += this.newMarks[el];
 }
-if (this.dismiss) {
-return sumMarks / this.newMarks.length}
-
-return null;
-} 
+return this.dismiss ? sumMarks / this.newMarks.length : null
+ } 
 
 dismissed () {
    this.dismiss = false;
-}
+ }
 
 recovered () {
    this.dismiss = true;
+ } 
 }
-}
+
+
 
 class BudgetStudent extends Student {
   constructor(university, course, fullName, marks, newMarks, scholarShip) {
@@ -61,13 +55,10 @@ class BudgetStudent extends Student {
     }
     const averageMark = sumMarks / this.newMarks.length
 
-    if ((averageMark >= 4.0) && (this.dismiss === true)) {
-    return ["Студент " + this.course + "го курсу " + this.university + ", " + this.fullName + " отримав " + this.scholarShip + " грн. стипендії"]
-    } else {
-      return ["Ви не отримали стипендії " + this.scholarShip + "грн."]
-    }
-   
-} 
+  return ((averageMark >= 4.0) && (this.dismiss === true)) ? 
+    ["Студент " + this.course + "го курсу " + this.university + ", " + this.fullName + " отримав " + this.scholarShip + " грн. стипендії"] : 
+    ["Ви не отримали стипендії " + this.scholarShip + "грн."]
+ } 
 }
 
 function controlMark() {
@@ -114,7 +105,7 @@ const budgetStudent = new BudgetStudent (
 // Code to Turn-On the Student: student.recovered(budgetStudent.recovered()) - it enough to delete the Code to Turn-Off
 
 document.writeln("<b>Method #1: </b> " + student.getInfo() + "</p>")
-console.log(student.getInfo())
+console.log([student.getInfo()])
 
 document.writeln("<b>Method #2: </b> " + student.studentMarks() + "</p>")
 console.log(student.studentMarks())
@@ -127,7 +118,6 @@ console.log(student.getAverageMark())
 
 document.writeln("<b>Method #5: </b> " + budgetStudent.getScholarship() + "</p>")
 console.log(budgetStudent.getScholarship())
-
 
 
 

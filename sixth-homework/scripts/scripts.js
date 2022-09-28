@@ -26,7 +26,6 @@ const students = [{
 
 
 
-
 // 1° Function
 
 function getSubjects(students) {
@@ -39,10 +38,10 @@ for (let i = 0; i < predmet2.length; i++) {
 
 return [predmet2.join(", ").replaceAll('_', ' ')]
 }
+
 const discipline = getSubjects (students[0]);
 document.writeln('<b> Function #1 - Get the Subject: </b>' + discipline + "</p>")
 console.log(discipline);
-
 
 
 
@@ -59,7 +58,6 @@ for (let i = 0; i < marks.length; i++) {
 const marksLenght = Object.values(students.subjects).flat(1).length;
 const finalAverageMark = sum / marksLenght;
 return [finalAverageMark.toFixed(2)] 
-
 }
 
 const averageMark = getAverageMark (students[0]);
@@ -74,13 +72,14 @@ function getStudentInfo(students) {
 const studentName = [ "<p> -  Name: " + Object.values(students.name).join("") + "</p>"]
 const studentYear = [" - Course: " + students.course + "</p>" ] 
 const averageMark = [" - Average Mark: " + getAverageMark(students) ]
-return [studentName + studentYear + averageMark]
+const studentInfo = studentName + studentYear + averageMark
+return {studentInfo}
 }
-
 
 const studentInfo = getStudentInfo (students[0]);
 document.writeln('<b>Function #3 - Get the Student Info:</b> ' + studentInfo + "</p>")
 console.log(studentInfo);
+
 
 
 // 4° Function
@@ -93,6 +92,7 @@ function getStudentsNames (students) {
 const studentsNames = getStudentsNames (students);
 document.writeln('<b>Function #4 - Get the Students Names:</b> ' + studentsNames + "</p>")
 console.log(studentsNames);
+
 
 
 //5° Function
@@ -110,7 +110,6 @@ function getBestStudent (students) {
        return b;
     }
   });
-
   return [bestAverageMark.name]
 }
 
@@ -122,17 +121,15 @@ console.log(bestStudent);
 
 //6° Function
 
-
 function calculateWordLetters(word) {
   let wordSplitted = {};
-
   for (let letter of word) {
     wordSplitted[letter] = wordSplitted.hasOwnProperty(letter) ? wordSplitted[letter] + 1 : 1;
   }
-
   return wordSplitted;
 }
 
 const wordCalc = calculateWordLetters ("programmer");
 document.writeln('<b>Function #6 - Calculate The Letters:</b> ' + {wordCalc} + "</p>")
 console.log(wordCalc);
+

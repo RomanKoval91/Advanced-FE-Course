@@ -115,13 +115,17 @@ console.log(JSON.parse("[" + divisibileFor5Numbers + "]"));
 // 8° Function: Replace Bad Words
 
 function clearBadWords (string) {
-let userReview = string.replace(/Shit|Fuck|Dumb/gi, '****')
+const badWord = prompt("Insert the new bad word")
+let badWords = new RegExp ('Shit|Fuck|Dumb|' + badWord, 'gi')
+let userReview = string.replace(badWords, '****')
 return userReview
+
 }
 
 const badWordsReplaced = clearBadWords('Holy Shit!, Fuck off!, Fuck you!, Dumb fuck!, Fuck-Fuck-Fuck!' + 'Fuck!');
 document.writeln('Function #8 - Bad Words Replaced: ' + badWordsReplaced + '</p>')
 console.log(badWordsReplaced);
+
 
 
 

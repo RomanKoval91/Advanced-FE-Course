@@ -5,20 +5,19 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 
+
 // 1) Get Pairs
 
 function getStudentsPairs(students) {
-
+    for (let i = 0; i < themes.length; i++) {
     const boys = students.filter(e => e.slice(-1) !== 'а');
     const girls = students.filter(e => e.slice(-1) === 'а');
-
-    for (let z = 0; z < boys.length; z++) {
-        getPairs.push([boys[z], girls[z]].join(" i "));
-    }
+    getPairs.push([boys[i], girls[i]]);
+    }                                                                                           
     return getPairs
-}
+    }
 
-const getPairs = [];
+const getPairs = [];   
 const pairs = getStudentsPairs(students);
 console.log(pairs);
 
@@ -28,7 +27,7 @@ console.log(pairs);
 
 function pairsAndThemes (pairs, themes) {
     for (let i = 0; i < pairs.length; i++) {
-        pairAndTheme.push ([pairs[i], themes[i]].join(" - "));
+        pairAndTheme.push ([pairs[i], themes[i]]);
     }
     return pairAndTheme;
 }
@@ -39,12 +38,11 @@ console.log(theme);
 
 
 
-
 // 3) Student and his mark
 
 function studentsAndMarks () {
     for (let i = 0; i < students.length; i++) {
-        studentAndMark.push ([students[i], marks[i]].join(" - "));
+        studentAndMark.push ([students[i], marks[i]]);
     }
     return studentAndMark
 }
@@ -55,15 +53,12 @@ console.log(mark);
 
 
 
-
 // 4) Random mark for the couple
 
-
 function givePairAndMark () {
-
     for (let i = 0; i < pairs.length; i++) {
         const pairMark = Math.floor(Math.random() * (5 - 1) + 1);
-        pairAndMark.push ([theme[i], pairMark].join(": "));
+        pairAndMark.push ([theme[i], pairMark]);
     }
     return pairAndMark
 }

@@ -50,7 +50,6 @@ console.log(discipline);
 function getAverageMark (students) {
   const marks = Object.values(students.subjects).flat(1)
   let sum = 0;
-
 for (let i = 0; i < marks.length; i++) {
     sum += marks[i];
 }

@@ -54,10 +54,11 @@ function getMySalary(country) {
   taxes:  getMyTaxes.call(ukraine, 1500),
   profit: salary - getMyTaxes.call(ukraine, 1500),
 }
-
 console.log(myProfit)
-
 }
+
+setInterval(() => getMySalary.call(ukraine), 5000);
+
 
 
 

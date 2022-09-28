@@ -57,7 +57,7 @@ for (let i = 0; i < marks.length; i++) {
   
 const marksLenght = Object.values(students.subjects).flat(1).length;
 const finalAverageMark = sum / marksLenght;
-return [finalAverageMark.toFixed(2)] 
+return Number(finalAverageMark.toFixed(2))
 }
 
 const averageMark = getAverageMark (students[0]);

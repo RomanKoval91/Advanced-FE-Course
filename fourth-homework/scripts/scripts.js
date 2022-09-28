@@ -9,15 +9,16 @@ const marks = [4, 5, 5, 3, 4, 5];
 // 1) Get Pairs
 
 function getStudentsPairs(students) {
+    const getPairs = []; 
     for (let i = 0; i < themes.length; i++) {
     const boys = students.filter(e => e.slice(-1) !== 'а');
     const girls = students.filter(e => e.slice(-1) === 'а');
-    getPairs.push([boys[i], girls[i]]);
+    getPairs.push([boys[i], girls[i]].join(" i "));
     }                                                                                           
     return getPairs
     }
 
-const getPairs = [];   
+  
 const pairs = getStudentsPairs(students);
 console.log(pairs);
 

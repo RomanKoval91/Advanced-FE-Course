@@ -44,23 +44,20 @@ console.log(totalTaxes);
 
 // Function #4 - Calculate My Salary
 
-
 function getMySalary(country) {
   const min = 1500;
   const max = 2000;
-  let salary = Math.floor(Math.random() * (max - min) + min);
+  const salary = Math.floor(Math.random() * (max - min) + min);
  
  let myProfit = {
   salary: salary,
-  taxes: this.tax,
-  profit: salary - this.tax
+  taxes:  getMyTaxes.call(ukraine, 1500),
+  profit: salary - getMyTaxes.call(ukraine, 1500),
 }
 
 console.log(myProfit)
 
 }
-
-setInterval(() => getMySalary.call(ukraine), 5000);
 
 
 

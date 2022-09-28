@@ -1,23 +1,53 @@
-let nNumber = parseInt (prompt (("Введіть число")));
+function control_n_Number() {
+    let number = 0;
+    while (!number) {
+      number = +prompt("Введіть перше число:");
+      if (!number) {
+        alert("Ви ввели літеру або інший символ.");
+        number = null;
+      }
+      if (!Number.isInteger(number)) {
+        alert("Число не є цілим або дорівнює 0!");
+        number = null;
+      } 
+  
+      if (number < 0) {
+        alert("Замаленьке число!");
+        number = null;
+      }
+    }
+    return number;
+  }
+
+const nNumber = control_n_Number()
 document.writeln ("<p><b> Перше число =</b>" + "\u00A0" + nNumber + "</p>");
 
-while (!nNumber) {
-    alert("Це не цифра");
-    alert ("Введіть цифру");  
+
+function control_m_Number() {
+    let number = 0;
+    while (!number) {
+      number = +prompt("Введіть друге число:");
+      if (!number) {
+        alert("Ви ввели літеру або інший символ.");
+        number = null;
+      }
+      if (!Number.isInteger(number)) {
+        alert("Число не є цілим або дорівнює 0!");
+        number = null;
+      } 
   
-break
- }
-
-
-let mNumber = parseInt (prompt (("Введіть друге число")));
-document.writeln ("<p><b> Друге число =</b>" + "\u00A0" + mNumber + "</p>");
-
-while (!mNumber) {
-alert("Це не цифра");
-alert ("Введіть цифру");
-
-break
+      if (number <= nNumber) {
+        alert("Число менше або рівне попередньому");
+        number = null;
+      }
+    }
+    return number;
   }
+
+  const mNumber = control_m_Number()
+  document.writeln ("<p><b> Друге число =</b>" + "\u00A0" + mNumber + "</p>");
+
+
 
 
 let booleanChoise = confirm  (("Пропускати парні числа?"));

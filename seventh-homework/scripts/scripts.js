@@ -41,7 +41,6 @@ document.writeln('<b>Function #3 - Calculate The Total Taxes:</b> ' + totalTaxes
 console.log(totalTaxes);
 
 
-
 // Function #4 - Calculate My Salary
 
 function getMySalary(country) {

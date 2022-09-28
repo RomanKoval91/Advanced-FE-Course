@@ -1,6 +1,5 @@
 class Student {
-  constructor(university, course, fullName, marks, newMarks, dismiss) 
-  {
+  constructor(university, course, fullName, marks, newMarks) {
   this.university = university;
   this.course = course;
   this.fullName = fullName;
@@ -11,18 +10,17 @@ class Student {
 
   getInfo() {
 
-    if (this.dismiss == true) { return "Студент " + this.course + "го курсу " + this.university + ", " + this.fullName;}
-    return null;
+    return [this.dismiss ? "Студент " + this.course + "го курсу " + this.university + ", " + this.fullName : null] 
   }
 
   studentMarks()  {
 
-    if (this.dismiss == true) {return this.marks;}
+    if (this.dismiss) {return this.marks}
     return null;
   }
 
   setMark () {
-    if (this.dismiss == true) {return this.newMarks}
+    if (this.dismiss) {return this.newMarks}
     return null;
   }
 
@@ -33,7 +31,7 @@ let sumMarks = 0;
 for (let el = 0; el < this.newMarks.length; el++) {
   sumMarks += this.newMarks[el];
 }
-if (this.dismiss == true) {
+if (this.dismiss) {
 return sumMarks / this.newMarks.length}
 
 return null;
@@ -49,12 +47,9 @@ recovered () {
 }
 
 class BudgetStudent extends Student {
-  constructor(university, course, fullName, marks, newMarks, scholarShip) 
-  {
+  constructor(university, course, fullName, marks, newMarks, scholarShip) {
     super(university, course, fullName, marks, newMarks);
-
   this.scholarShip = scholarShip;
-
   setInterval(function() { 
     console.log(this.getScholarship())}.bind(this), 30000);
   }
@@ -67,8 +62,10 @@ class BudgetStudent extends Student {
     const averageMark = sumMarks / this.newMarks.length
 
     if ((averageMark >= 4.0) && (this.dismiss === true)) {
-    return "Студент " + this.course + "го курсу " + this.university + ", " + this.fullName + " отримав " + this.scholarShip + " грн. стипендії"
-    } else {return "Ви не отримали стипендії " + this.scholarShip + "грн.";}
+    return ["Студент " + this.course + "го курсу " + this.university + ", " + this.fullName + " отримав " + this.scholarShip + " грн. стипендії"]
+    } else {
+      return ["Ви не отримали стипендії " + this.scholarShip + "грн."]
+    }
    
 } 
 }
@@ -130,6 +127,7 @@ console.log(student.getAverageMark())
 
 document.writeln("<b>Method #5: </b> " + budgetStudent.getScholarship() + "</p>")
 console.log(budgetStudent.getScholarship())
+
 
 
 

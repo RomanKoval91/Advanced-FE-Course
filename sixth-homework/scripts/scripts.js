@@ -50,6 +50,7 @@ console.log(discipline);
 function getAverageMark (students) {
   const marks = Object.values(students.subjects).flat(1)
   let sum = 0;
+
 for (let i = 0; i < marks.length; i++) {
     sum += marks[i];
 }
@@ -68,10 +69,10 @@ console.log(averageMark);
 // 3° Function
 
 function getStudentInfo(students) {
-const studentName = [ "<p> -  Name: " + Object.values(students.name).join("") + "</p>"]
-const studentYear = [" - Course: " + students.course + "</p>" ] 
-const averageMark = [" - Average Mark: " + getAverageMark(students) ]
-const studentInfo = studentName + studentYear + averageMark
+const studentName =  ', "Name:" '  + Object.values(students.name).join("") 
+const studentYear = '"Course:" ' + students.course
+const averageMark = ', "Average Mark:" ' + getAverageMark(students) 
+const studentInfo = studentYear + studentName + averageMark
 return {studentInfo}
 }
 

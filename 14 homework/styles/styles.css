@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+}
+
+#my_text_container {
+  background-image: url(../images/4868950.jfif);
+}
+
+#mytext {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-title {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 300px;
+  margin-left: 50px;
+  font-family: 'Comforter Brush', cursive;
+}
+
+
+.paragraph {
+  width: 59%;
+  text-align: center;
+  font-family: 'Comforter Brush', cursive;
+}

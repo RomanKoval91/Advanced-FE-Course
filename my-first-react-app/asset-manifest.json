@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Advanced-FE-Course.git/static/css/main.759caa03.css",
+    "main.js": "/Advanced-FE-Course.git/static/js/main.ba3af0d3.js",
+    "index.html": "/Advanced-FE-Course.git/index.html",
+    "main.759caa03.css.map": "/Advanced-FE-Course.git/static/css/main.759caa03.css.map",
+    "main.ba3af0d3.js.map": "/Advanced-FE-Course.git/static/js/main.ba3af0d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.759caa03.css",
+    "static/js/main.ba3af0d3.js"
+  ]
+}
